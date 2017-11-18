@@ -27,8 +27,8 @@ const GroupSchema = new Schema({
 GroupSchema.statics.addMeetup = async function (id, args) {
   const Meetup = mongoose.model('Meetup');
 
-  const group = await this.findByIdAndUpdate(id);
-  //const group = await this.findByIdAndUpdate(id, { $push: { meetups: meetup.id } });
+  // const group = await this.findByIdAndUpdate(id);
+  const group = await this.findById(id);
 
   const meetup = await new Meetup({ ...args, group });
 
@@ -38,6 +38,5 @@ GroupSchema.statics.addMeetup = async function (id, args) {
 
   return result;
 };
-
 
 export default mongoose.model('Group', GroupSchema);

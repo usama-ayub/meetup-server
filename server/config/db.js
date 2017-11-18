@@ -6,5 +6,5 @@ export default () => {
     mongoose.connect(url);
     mongoose.connection
         .once('open', () => console.log('mongodb run'))
-        .on('err', err => console.error(err));
+        .on('err', err => console.error('error',err));
 }

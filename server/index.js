@@ -16,9 +16,9 @@ app.use('/api', [MeetupRoutes, GroupRoutes]);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, err => {
-    if (err) {
-        console.log(err);
-    } {
-        console.log(`App listen to port: ${PORT}`);
-    }
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(`App listen to port: ${PORT}`);
+  }
 });
