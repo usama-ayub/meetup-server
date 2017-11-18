@@ -41,8 +41,7 @@ GroupSchema.statics.addMeetup = async function (id, args) {
 
   return {
     meetup: await meetup.save(),
-    group: await
-  }
+  };
 
 };
 
